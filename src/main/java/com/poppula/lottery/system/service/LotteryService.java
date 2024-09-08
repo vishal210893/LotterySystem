@@ -1,9 +1,9 @@
-package com.poppula.poppula_test.service;
+package com.poppula.lottery.system.service;
 
-import com.poppula.poppula_test.entity.Line;
-import com.poppula.poppula_test.entity.Ticket;
-import com.poppula.poppula_test.repository.TicketRepository;
-import com.poppula.poppula_test.util.PoppuloUtil;
+import com.poppula.lottery.system.entity.Line;
+import com.poppula.lottery.system.entity.Ticket;
+import com.poppula.lottery.system.repository.TicketRepository;
+import com.poppula.lottery.system.util.PoppuloUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,8 @@
-package com.poppula.poppula_test;
+package com.poppula.lottery.system;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.poppula.poppula_test.controller.TicketController;
-import com.poppula.poppula_test.entity.Ticket;
-import com.poppula.poppula_test.service.LotteryService;
+import com.poppula.lottery.system.controller.TicketController;
+import com.poppula.lottery.system.entity.Ticket;
+import com.poppula.lottery.system.service.LotteryService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -26,7 +25,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(TicketController.class)
-public class TicketControllerTests {
+class TicketControllerTests {
 
     @Autowired
     private MockMvc mockMvc;
@@ -38,13 +37,13 @@ public class TicketControllerTests {
     private TicketController ticketController;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         MockitoAnnotations.openMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(ticketController).build();
     }
 
     @Test
-    public void createTicket_ShouldReturnCreatedStatus() throws Exception {
+    void createTicket_ShouldReturnCreatedStatus() throws Exception {
         Ticket ticket = new Ticket();
         ticket.setId(1L);
         when(lotteryService.generateTicket(anyInt())).thenReturn(ticket);
@@ -58,7 +57,7 @@ public class TicketControllerTests {
     }
 
     @Test
-    public void getAllTicket_ShouldReturnOkStatus() throws Exception {
+    void getAllTicket_ShouldReturnOkStatus() throws Exception {
         Ticket ticket1 = new Ticket();
         Ticket ticket2 = new Ticket();
         List<Ticket> tickets = Arrays.asList(ticket1, ticket2);
@@ -71,7 +70,7 @@ public class TicketControllerTests {
     }
 
     @Test
-    public void getAllTicket_ShouldReturnNotFoundOnException() throws Exception {
+    void getAllTicket_ShouldReturnNotFoundOnException() throws Exception {
         when(lotteryService.findAllTicket()).thenThrow(new RuntimeException("Error"));
 
         mockMvc.perform(get("/ticket")
@@ -80,7 +79,7 @@ public class TicketControllerTests {
     }
 
     @Test
-    public void getTicket_ShouldReturnOkStatus() throws Exception {
+    void getTicket_ShouldReturnOkStatus() throws Exception {
         Ticket ticket = new Ticket();
         ticket.setId(1L);
         when(lotteryService.getTicket(anyLong())).thenReturn(ticket);
@@ -92,7 +91,7 @@ public class TicketControllerTests {
     }
 
     @Test
-    public void getTicket_ShouldReturnNotFoundOnException() throws Exception {
+    void getTicket_ShouldReturnNotFoundOnException() throws Exception {
         when(lotteryService.getTicket(anyLong())).thenThrow(new RuntimeException("Error"));
 
         mockMvc.perform(get("/ticket/1")
@@ -101,7 +100,7 @@ public class TicketControllerTests {
     }
 
     @Test
-    public void amendTicket_ShouldReturnOkStatus() throws Exception {
+    void amendTicket_ShouldReturnOkStatus() throws Exception {
         Ticket ticket = new Ticket();
         ticket.setId(1L);
         when(lotteryService.amendTicket(anyLong(), anyInt())).thenReturn(ticket);
@@ -114,7 +113,7 @@ public class TicketControllerTests {
     }
 
     @Test
-    public void amendTicket_ShouldReturnBadRequestOnException() throws Exception {
+    void amendTicket_ShouldReturnBadRequestOnException() throws Exception {
         when(lotteryService.amendTicket(anyLong(), anyInt())).thenThrow(new RuntimeException("Error"));
 
         mockMvc.perform(put("/ticket/1")
@@ -125,7 +124,7 @@ public class TicketControllerTests {
     }
 
     @Test
-    public void checkTicketStatus_ShouldReturnOkStatus() throws Exception {
+    void checkTicketStatus_ShouldReturnOkStatus() throws Exception {
         when(lotteryService.checkTicketStatus(anyLong())).thenReturn(true);
 
         mockMvc.perform(put("/ticket/status/1")
@@ -135,7 +134,7 @@ public class TicketControllerTests {
     }
 
     @Test
-    public void checkTicketStatus_ShouldReturnNotFoundOnException() throws Exception {
+    void checkTicketStatus_ShouldReturnNotFoundOnException() throws Exception {
         when(lotteryService.checkTicketStatus(anyLong())).thenThrow(new RuntimeException("Error"));
 
         mockMvc.perform(put("/ticket/status/1")

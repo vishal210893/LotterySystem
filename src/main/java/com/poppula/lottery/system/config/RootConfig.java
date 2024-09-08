@@ -1,4 +1,4 @@
-package com.poppula.poppula_test.config;
+package com.poppula.lottery.system.config;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

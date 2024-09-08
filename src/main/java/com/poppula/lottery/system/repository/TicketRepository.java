@@ -1,6 +1,6 @@
-package com.poppula.poppula_test.repository;
+package com.poppula.lottery.system.repository;
 
-import com.poppula.poppula_test.entity.Ticket;
+import com.poppula.lottery.system.entity.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TicketRepository extends JpaRepository<Ticket, Long> {

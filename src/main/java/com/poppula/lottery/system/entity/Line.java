@@ -1,4 +1,4 @@
-package com.poppula.poppula_test.entity;
+package com.poppula.lottery.system.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

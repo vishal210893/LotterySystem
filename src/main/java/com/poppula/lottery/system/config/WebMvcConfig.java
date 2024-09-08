@@ -1,6 +1,6 @@
-package com.poppula.poppula_test.config;
+package com.poppula.lottery.system.config;
 
-import com.poppula.poppula_test.util.PoppuloUtil;
+import com.poppula.lottery.system.util.PoppuloUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;

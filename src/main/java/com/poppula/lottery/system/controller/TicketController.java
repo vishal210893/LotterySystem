@@ -1,8 +1,7 @@
-package com.poppula.poppula_test.controller;
+package com.poppula.lottery.system.controller;
 
-import com.poppula.poppula_test.entity.Ticket;
-import com.poppula.poppula_test.service.LotteryService;
-import lombok.RequiredArgsConstructor;
+import com.poppula.lottery.system.entity.Ticket;
+import com.poppula.lottery.system.service.LotteryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

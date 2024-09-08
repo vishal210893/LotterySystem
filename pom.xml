@@ -8,11 +8,11 @@
         <version>3.3.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.poppula</groupId>
-    <artifactId>Poppula_Test</artifactId>
+    <groupId>com.poppulo</groupId>
+    <artifactId>lottery system</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Poppula_Test</name>
-    <description>Poppula_Test</description>
+    <name>Poppulo_Test</name>
+    <description>Poppulo_Test</description>
 
     <properties>
         <java.version>17</java.version>
