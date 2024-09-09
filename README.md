@@ -44,3 +44,6 @@ Please ensure your contributions adhere to the project's coding standards and in
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Swagger URL
+http://localhost:8080/swagger-ui/index.html
