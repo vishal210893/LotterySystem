@@ -1,8 +1,8 @@
-package com.poppula.lottery.system;
+package com.poppulo.lottery.system;
 
-import com.poppula.lottery.system.controller.TicketController;
-import com.poppula.lottery.system.entity.Ticket;
-import com.poppula.lottery.system.service.LotteryService;
+import com.poppulo.lottery.system.controller.TicketController;
+import com.poppulo.lottery.system.entity.Ticket;
+import com.poppulo.lottery.system.service.LotteryService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

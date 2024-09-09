@@ -1,7 +1,7 @@
-package com.poppula.lottery.system.controller;
+package com.poppulo.lottery.system.controller;
 
-import com.poppula.lottery.system.entity.Ticket;
-import com.poppula.lottery.system.service.LotteryService;
+import com.poppulo.lottery.system.entity.Ticket;
+import com.poppulo.lottery.system.service.LotteryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;

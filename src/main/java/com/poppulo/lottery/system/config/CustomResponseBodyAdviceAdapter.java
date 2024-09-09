@@ -1,7 +1,7 @@
-package com.poppula.lottery.system.config;
+package com.poppulo.lottery.system.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.poppula.lottery.system.util.PoppuloUtil;
+import com.poppulo.lottery.system.util.PoppuloUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
